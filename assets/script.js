@@ -1,31 +1,55 @@
 const htmlCards = [
   {
-    term: "DOCTYPE",
+    term: "&lt;!DOCTYPE&gt;",
     definition: "Defines the document type and version of HTML",
   },
-  { term: "a", definition: "Defines a hyperlink" },
-  { term: "p", definition: "Defines a paragraph" },
-  { term: "div", definition: "Defines a division or section" },
-  { term: "span", definition: "Defines a section in a document" },
-  { term: "h1-h6", definition: "Defines HTML headings" },
-  { term: "img", definition: "Defines an image" },
-  { term: "ul", definition: "Defines an unordered list" },
-  { term: "ol", definition: "Defines an ordered list" },
-  { term: "li", definition: "Defines a list item" },
-  { term: "table", definition: "Defines a table" },
-  { term: "tr", definition: "Defines a row in a table" },
-  { term: "td", definition: "Defines a cell in a table" },
-  { term: "th", definition: "Defines a header cell in a table" },
-  { term: "form", definition: "Defines an HTML form for user input" },
-  { term: "input", definition: "Defines an input control" },
-  { term: "button", definition: "Defines a clickable button" },
+  { term: "&lt;a&gt;&lt;/a&gt;", definition: "Defines a hyperlink" },
+  { term: "&lt;p&gt;&lt;/p&gt;", definition: "Defines a paragraph" },
   {
-    term: "link",
+    term: "&lt;div&gt;&lt;/div&gt;",
+    definition: "Defines a division or section",
+  },
+  {
+    term: "&lt;span&gt;&lt;/span&gt;",
+    definition: "Defines a section in a document",
+  },
+  {
+    term: "&lt;h1&gt;&lt;/h1&gt; - &lt;h6&gt;&lt;/h6&gt;",
+    definition: "Defines HTML headings",
+  },
+  { term: "&lt;img&gt;", definition: "Defines an image" },
+  { term: "&lt;ul&gt;&lt;/ul&gt;", definition: "Defines an unordered list" },
+  { term: "&lt;ol&gt;&lt;/ol&gt;", definition: "Defines an ordered list" },
+  { term: "&lt;li&gt;&lt;/li&gt;", definition: "Defines a list item" },
+  { term: "&lt;table&gt;&lt;/table&gt;", definition: "Defines a table" },
+  { term: "&lt;tr&gt;&lt;/tr&gt;", definition: "Defines a row in a table" },
+  { term: "&lt;td&gt;&lt;/td&gt;", definition: "Defines a cell in a table" },
+  {
+    term: "&lt;th&gt;&lt;/th&gt;",
+    definition: "Defines a header cell in a table",
+  },
+  {
+    term: "&lt;form&gt;&lt;/form&gt;",
+    definition: "Defines an HTML form for user input",
+  },
+  { term: "&lt;input&gt;", definition: "Defines an input control" },
+  {
+    term: "&lt;button&gt;&lt;/button&gt;",
+    definition: "Defines a clickable button",
+  },
+  {
+    term: "&lt;link&gt;",
     definition:
       "Defines the relationship between a document and an external resource",
   },
-  { term: "meta", definition: "Defines metadata about an HTML document" },
-  { term: "style", definition: "Defines style information for a document" },
+  {
+    term: "&lt;meta&gt;",
+    definition: "Defines metadata about an HTML document",
+  },
+  {
+    term: "&lt;style&gt;&lt;/style&gt;",
+    definition: "Defines style information for a document",
+  },
 ];
 
 const cssCards = [
