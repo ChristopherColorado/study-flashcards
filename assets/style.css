@@ -1,43 +1,75 @@
+* {
+    color: rgb(44, 53, 28);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background: linear-gradient(to bottom, navy, lightblue);
+    background: linear-gradient(45deg, #2a477f, #436aae);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  header{
-    background: linear-gradient(to top, olive, rgb(219, 219, 95))
+    overflow: hidden;
   }
   
-  footer{
-    background: linear-gradient(to bottom, olive, rgb(219, 219, 95))
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-
-  header, footer {
+  
+  header {
+    background: none;
+    padding: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  footer {
+    background: none;
     padding: 10px;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   
   header h1 {
     margin: 0;
+    color: rgb(44, 53, 28);
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
   }
   
   nav button {
     background: none;
-    border: 1px solid #333;
+    border: 2px solid rgb(44, 53, 28);
     padding: 10px;
     cursor: pointer;
-    margin-left: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 115px;
   }
   
   nav button:hover {
     background: #333;
     color: #fff;
+    transform: scale(1.1);
   }
   
   main {
@@ -66,7 +98,7 @@ body {
     font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: bold;
-    color: white;
+    color: rgb(44, 53, 28);
   }
   
   .flashcard-container {
@@ -79,22 +111,20 @@ body {
   .flashcard {
     width: 5in;
     height: 3in;
-    border: 4px solid olive;
-    background: white;
+    border: 4px solid rgb(44, 53, 28);
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     position: relative;
     perspective: 1000px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
   }
   
-  .flashcard.flipped .front {
-    display: none;
-  }
-  
-  .flashcard.flipped .back {
-    display: flex;
+  .flashcard.flipped {
+    transform: rotateY(180deg);
   }
   
   .front, .back {
@@ -110,7 +140,7 @@ body {
   }
   
   .back {
-    display: none;
+    transform: rotateY(180deg);
   }
   
   .arrow {
@@ -121,13 +151,37 @@ body {
     border: none;
     font-size: 2em;
     cursor: pointer;
-    color: olive;
+    color: rgb(44, 53, 28); /* Olive */
+    transition: transform 0.3s;
   }
   
   .left-arrow {
-    left: 10px;
+    left: 550px; /* Adjust the value to ensure the arrow is visible and correctly spaced */
   }
   
   .right-arrow {
-    right: 10px;
+    right: 550px; /* Adjust the value to ensure the arrow is visible and correctly spaced */
+  }
+  
+  .arrow:hover {
+    transform: translateY(-50%) scale(2);
+  }
+
+  /* Particle styles */
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: moveParticle 5s linear infinite;
+  }
+  
+  @keyframes moveParticle {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      transform: translate(100vw, 100vh) scale(0.1);
+    }
   }

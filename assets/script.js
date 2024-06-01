@@ -224,3 +224,16 @@ function nextCard(section) {
 
 // Initialize the first section
 showSection("html");
+
+// Add particle effect
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
+  for (let i = 0; i < 100; i++) {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = `${Math.random() * 100}vw`;
+    particle.style.top = `${Math.random() * 100}vh`;
+    particle.style.animationDuration = `${Math.random() * 5 + 3}s`;
+    body.appendChild(particle);
+  }
+});
