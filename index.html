@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flash Cards</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Flash Cards</h1>
+      <nav>
+        <button onclick="showSection('html')">HTML</button>
+        <button onclick="showSection('css')">CSS</button>
+        <button onclick="showSection('javascript')">JavaScript</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="html" class="flashcard-section">
+        <div class="flashcard-container">
+          <!-- Flashcards will be inserted here by JavaScript -->
+        </div>
+        <button class="arrow left-arrow" onclick="prevCard('html')">❮</button>
+        <button class="arrow right-arrow" onclick="nextCard('html')">❯</button>
+      </section>
+
+      <section id="css" class="flashcard-section">
+        <div class="flashcard-container">
+          <!-- Flashcards will be inserted here by JavaScript -->
+        </div>
+        <button class="arrow left-arrow" onclick="prevCard('css')">❮</button>
+        <button class="arrow right-arrow" onclick="nextCard('css')">❯</button>
+      </section>
+
+      <section id="javascript" class="flashcard-section">
+        <div class="flashcard-container">
+          <!-- Flashcards will be inserted here by JavaScript -->
+        </div>
+        <button class="arrow left-arrow" onclick="prevCard('javascript')">
+          ❮
+        </button>
+        <button class="arrow right-arrow" onclick="nextCard('javascript')">
+          ❯
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Flash Cards</p>
+    </footer>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
